@@ -6,43 +6,69 @@ import { ThemeSwitcher } from "@/components/theme-switcher";
 
 export default function ButtonsShowcase() {
   return (
-    <div className="min-h-screen bg-background font-sans">
-      <div className="container mx-auto py-12 px-6 relative">
+    <div className="bg-background min-h-screen font-sans">
+      <div className="relative container mx-auto px-6 py-12">
         <div className="absolute top-6 right-6">
           <ThemeSwitcher />
         </div>
-        
+
         <div className="mb-10">
-          <Link href="/" className="text-muted-foreground hover:text-foreground flex items-center gap-2 mb-8 transition-colors text-lg">
+          <Link
+            href="/"
+            className="text-muted-foreground hover:text-foreground mb-8 flex items-center gap-2 text-lg transition-colors"
+          >
             <ArrowLeft className="size-5" /> Back to home
           </Link>
-          <h1 className="text-4xl font-bold mb-4">Button Component</h1>
-          <p className="text-xl text-muted-foreground mb-8">
-            Buttons allow users to trigger actions or events with a single click.
+          <h1 className="mb-4 text-4xl font-bold">Button Component</h1>
+          <p className="text-muted-foreground mb-8 text-xl">
+            Buttons allow users to trigger actions or events with a single
+            click.
           </p>
         </div>
 
         <div className="space-y-16">
           {/* Button Variants */}
           <section>
-            <h2 className="text-2xl font-semibold mb-6 border-b pb-2">Button Variants</h2>
-            <div className="flex flex-wrap gap-6 p-6 bg-muted/50 rounded-lg">
-              <Button variant="default" className="text-lg py-6 px-8">Default</Button>
-              <Button variant="destructive" className="text-lg py-6 px-8">Destructive</Button>
-              <Button variant="outline" className="text-lg py-6 px-8">Outline</Button>
-              <Button variant="secondary" className="text-lg py-6 px-8">Secondary</Button>
-              <Button variant="ghost" className="text-lg py-6 px-8">Ghost</Button>
-              <Button variant="link" className="text-lg py-6 px-8">Link</Button>
+            <h2 className="mb-6 border-b pb-2 text-2xl font-semibold">
+              Button Variants
+            </h2>
+            <div className="bg-muted/50 flex flex-wrap gap-6 rounded-lg p-6">
+              <Button variant="default" className="px-8 py-6 text-lg">
+                Default
+              </Button>
+              <Button variant="destructive" className="px-8 py-6 text-lg">
+                Destructive
+              </Button>
+              <Button variant="outline" className="px-8 py-6 text-lg">
+                Outline
+              </Button>
+              <Button variant="secondary" className="px-8 py-6 text-lg">
+                Secondary
+              </Button>
+              <Button variant="ghost" className="px-8 py-6 text-lg">
+                Ghost
+              </Button>
+              <Button variant="link" className="px-8 py-6 text-lg">
+                Link
+              </Button>
             </div>
           </section>
 
           {/* Button Sizes */}
           <section>
-            <h2 className="text-2xl font-semibold mb-6 border-b pb-2">Button Sizes</h2>
-            <div className="flex flex-wrap items-center gap-6 p-6 bg-muted/50 rounded-lg">
-              <Button size="default" className="text-lg">Default Size</Button>
-              <Button size="sm" className="text-base">Small</Button>
-              <Button size="lg" className="text-xl">Large</Button>
+            <h2 className="mb-6 border-b pb-2 text-2xl font-semibold">
+              Button Sizes
+            </h2>
+            <div className="bg-muted/50 flex flex-wrap items-center gap-6 rounded-lg p-6">
+              <Button size="default" className="text-lg">
+                Default Size
+              </Button>
+              <Button size="sm" className="text-base">
+                Small
+              </Button>
+              <Button size="lg" className="text-xl">
+                Large
+              </Button>
               <Button size="icon" className="text-xl">
                 <Plus className="size-6" />
               </Button>
@@ -51,15 +77,17 @@ export default function ButtonsShowcase() {
 
           {/* Buttons with Icons */}
           <section>
-            <h2 className="text-2xl font-semibold mb-6 border-b pb-2">Buttons with Icons</h2>
-            <div className="flex flex-wrap gap-6 p-6 bg-muted/50 rounded-lg">
-              <Button className="text-lg gap-2">
+            <h2 className="mb-6 border-b pb-2 text-2xl font-semibold">
+              Buttons with Icons
+            </h2>
+            <div className="bg-muted/50 flex flex-wrap gap-6 rounded-lg p-6">
+              <Button className="gap-2 text-lg">
                 <Plus className="size-5" /> Create New
               </Button>
-              <Button variant="destructive" className="text-lg gap-2">
+              <Button variant="destructive" className="gap-2 text-lg">
                 <Trash className="size-5" /> Delete
               </Button>
-              <Button variant="outline" className="text-lg gap-2">
+              <Button variant="outline" className="gap-2 text-lg">
                 Continue <ArrowRight className="size-5" />
               </Button>
             </div>
@@ -67,11 +95,23 @@ export default function ButtonsShowcase() {
 
           {/* Disabled Buttons */}
           <section>
-            <h2 className="text-2xl font-semibold mb-6 border-b pb-2">Disabled State</h2>
-            <div className="flex flex-wrap gap-6 p-6 bg-muted/50 rounded-lg">
-              <Button disabled className="text-lg py-6 px-8">Disabled</Button>
-              <Button variant="destructive" disabled className="text-lg py-6 px-8">Disabled</Button>
-              <Button variant="outline" disabled className="text-lg py-6 px-8">Disabled</Button>
+            <h2 className="mb-6 border-b pb-2 text-2xl font-semibold">
+              Disabled State
+            </h2>
+            <div className="bg-muted/50 flex flex-wrap gap-6 rounded-lg p-6">
+              <Button disabled className="px-8 py-6 text-lg">
+                Disabled
+              </Button>
+              <Button
+                variant="destructive"
+                disabled
+                className="px-8 py-6 text-lg"
+              >
+                Disabled
+              </Button>
+              <Button variant="outline" disabled className="px-8 py-6 text-lg">
+                Disabled
+              </Button>
             </div>
           </section>
         </div>

@@ -27,18 +27,21 @@ export function ThemeProvider({
   ...props
 }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(
-    () => (typeof window !== "undefined" && (localStorage.getItem(storageKey) as Theme)) || defaultTheme
+    () =>
+      (typeof window !== "undefined" &&
+        (localStorage.getItem(storageKey) as Theme)) ||
+      defaultTheme,
   );
 
   useEffect(() => {
     const root = window.document.documentElement;
-    
+
     // Remove all theme classes
     root.classList.remove("light", "dark", "blue", "purple", "green");
-    
+
     // Add the current theme class
     root.classList.add(theme);
-    
+
     // Store the theme preference
     localStorage.setItem(storageKey, theme);
   }, [theme, storageKey]);
