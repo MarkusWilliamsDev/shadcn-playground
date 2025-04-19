@@ -2,11 +2,16 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { ThemeSwitcher } from "@/components/theme-switcher";
 
 export default function AvatarsShowcase() {
   return (
     <div className="min-h-screen bg-background font-sans">
-      <div className="container mx-auto py-10 px-4">
+      <div className="container mx-auto py-10 px-4 relative">
+        <div className="absolute top-6 right-6">
+          <ThemeSwitcher />
+        </div>
+        
         <div className="mb-8">
           <Link href="/" className="text-muted-foreground hover:text-foreground flex items-center gap-1 mb-6 transition-colors">
             <ArrowLeft className="size-4" /> Back to home

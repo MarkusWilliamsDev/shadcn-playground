@@ -8,13 +8,18 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { ThemeSwitcher } from "@/components/theme-switcher";
 
 export default function FormElementsShowcase() {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
     <div className="min-h-screen bg-background font-sans">
-      <div className="container mx-auto py-10 px-4">
+      <div className="container mx-auto py-10 px-4 relative">
+        <div className="absolute top-6 right-6">
+          <ThemeSwitcher />
+        </div>
+        
         <div className="mb-8">
           <Link href="/" className="text-muted-foreground hover:text-foreground flex items-center gap-1 mb-6 transition-colors">
             <ArrowLeft className="size-4" /> Back to home

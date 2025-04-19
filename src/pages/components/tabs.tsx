@@ -3,11 +3,16 @@ import { ArrowLeft, Settings, User, BarChart, Image } from "lucide-react";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { ThemeSwitcher } from "@/components/theme-switcher";
 
 export default function TabsShowcase() {
   return (
     <div className="min-h-screen bg-background font-sans">
-      <div className="container mx-auto py-10 px-4">
+      <div className="container mx-auto py-10 px-4 relative">
+        <div className="absolute top-6 right-6">
+          <ThemeSwitcher />
+        </div>
+        
         <div className="mb-8">
           <Link href="/" className="text-muted-foreground hover:text-foreground flex items-center gap-1 mb-6 transition-colors">
             <ArrowLeft className="size-4" /> Back to home
