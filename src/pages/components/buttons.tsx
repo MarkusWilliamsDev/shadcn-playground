@@ -2,11 +2,16 @@ import Link from "next/link";
 import { ArrowLeft, ArrowRight, Plus, Trash } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { ThemeSwitcher } from "@/components/theme-switcher";
 
 export default function ButtonsShowcase() {
   return (
     <div className="min-h-screen bg-background font-sans">
-      <div className="container mx-auto py-12 px-6">
+      <div className="container mx-auto py-12 px-6 relative">
+        <div className="absolute top-6 right-6">
+          <ThemeSwitcher />
+        </div>
+        
         <div className="mb-10">
           <Link href="/" className="text-muted-foreground hover:text-foreground flex items-center gap-2 mb-8 transition-colors text-lg">
             <ArrowLeft className="size-5" /> Back to home
